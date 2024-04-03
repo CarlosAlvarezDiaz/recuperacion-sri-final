@@ -22,13 +22,22 @@ Primero creamos el contenedor con el siguiente comando:
 
        $ docker run -it  ubuntu
 
-Y despues comprobamos su estado con este otro comando:
+Y despues comprobamos su estado con este otro comando, el cual tambien nos dara su nombre:
 
        $docker ps -a
        CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
-       77953b3c9692   ubuntu    "/bin/bash"   42 seconds ago   Up 40 seconds                    focused_fermi
+       77953b3c9692   ubuntu    "/bin/bash"   42 seconds ago   Up 40 seconds       focused_fermi
        
 3 Crea un contenedor con el nombre 'ubu1'. ¿Como puedes acceder a él?
+
+Al igual que en el ejercicio anterior, empezaremos con el comando docker run:
+       
+       $ docker run -it --name ubu1 ubuntu
+
+Y para acceder a el usaremos el comando docker exec:
+
+       $ docker exec -it ubu1 bash
+
 4 Comprueba que ip tiene y si puedes hacer un ping a google.com
 5 Crea un contenedor con el nombre 'ubu2'. ¿Puedes hacer ping entre los contenedores?
 6 Sal del terminal, ¿que ocurrió con el contenedor?
