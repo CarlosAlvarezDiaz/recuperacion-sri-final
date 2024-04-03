@@ -113,7 +113,7 @@ Para salir de la terminal usaremos el comando exit:
 
        $ exit
 
-Y para comprobar el estado de los contenedores despues de salir de la terminal usaremos el comando docker ps:
+Y para comprobar el estado de los contenedores despues de salir de la terminal, abrimos una nueva terminal y entonces usaremos el comando docker ps:
 
        $ docker ps -a
        CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
@@ -122,4 +122,14 @@ Y para comprobar el estado de los contenedores despues de salir de la terminal u
        77953b3c9692   ubuntu    "/bin/bash"   40 minutes ago   Up 40 minutes             focused_fermi
        
 7 ¿Cuanta memoria en el disco duro ocupaste? ¿Hay alguna herramienta de docker para calcularlo?
+
+Si que hay una herramienta de docker para calcular la memoria en el disco duro ocupado y es el comando docker system df:
+
+       $ docker system df
+       TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+       Images          1         1         77.86MB   0B (0%)     
+       Containers      3         3         102.7MB   0B (0%)     
+       Local Volumes   0         0         0B        0B
+       Build Cache     0         0         0B        0B
+       
 8 ¿Cuanta RAM ocupan los contenedores? Crea cuantos contenedores necesites para calcularlo.
