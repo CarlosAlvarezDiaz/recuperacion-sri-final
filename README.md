@@ -45,7 +45,7 @@ Y para acceder a el usaremos el comando docker exec:
 Primero usaremos el comando docker inspect para comprobar su ip:
 
        $ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ubu1
-172.17.0.3
+              172.17.0.3
 
 Para comprobar si se puede hacer ping a google.com, primero debemos hacer click derecho sobre el contenedor mientras este activo y le damos a attach shell
 
@@ -73,6 +73,40 @@ Una vez hecho eso, hacemos ping a google.com:
               rtt min/avg/max/mdev = 17.395/17.991/18.537/0.374 ms
               
 5 Crea un contenedor con el nombre 'ubu2'. ¿Puedes hacer ping entre los contenedores?
+
+Empezaremos creando el contenedor 'ubu2' de la misma manera que creamos el contenedor 'ubu1' en el ejercicio 3:
+
+       $ docker run -it --name ubu2 ubuntu
+
+Entonces volvemos al attach shell de ubu2 en este caso y hacemos apt-get update y apt-get install:
+
+       $ apt-get update
+         apt-get install iputils-ping
+
+Y luego usamos el comando docker exec ping, primero desde el contenedor 'ubu1' hasta la ip del contenedor 'ubu2':
+
+       $ docker exec -it ubu1 ping 172.17.0.4
+              PING 172.17.0.4 (172.17.0.4) 56(84) bytes of data.
+              64 bytes from 172.17.0.4: icmp_seq=1 ttl=64 time=0.043 ms 
+              64 bytes from 172.17.0.4: icmp_seq=2 ttl=64 time=0.037 ms
+              64 bytes from 172.17.0.4: icmp_seq=3 ttl=64 time=0.038 ms
+              64 bytes from 172.17.0.4: icmp_seq=4 ttl=64 time=0.039 ms
+
+              --- 172.17.0.4 ping statistics ---
+              4 packets transmitted, 4 received, 0% packet loss, time 3095ms
+              rtt min/avg/max/mdev = 0.037/0.039/0.043/0.002 ms
+
+Y luego desde el contendor 'ubu2' hasta la ip del contenedor 'ubu1':
+
+       $ docker exec -it ubu1 ping 172.17.0.3
+              PING 172.17.0.3 (172.17.0.3) 56(84) bytes of data.
+              64 bytes from 172.17.0.3: icmp_seq=1 ttl=64 time=0.013 ms 
+              64 bytes from 172.17.0.3: icmp_seq=2 ttl=64 time=0.018 ms
+              
+              --- 172.17.0.3 ping statistics ---
+              2 packets transmitted, 2 received, 0% packet loss, time 1040ms
+              rtt min/avg/max/mdev = 0.013/0.015/0.018/0.002 ms
+              
 6 Sal del terminal, ¿que ocurrió con el contenedor?
 7 ¿Cuanta memoria en el disco duro ocupaste? ¿Hay alguna herramienta de docker para calcularlo?
 8 ¿Cuanta RAM ocupan los contenedores? Crea cuantos contenedores necesites para calcularlo.
