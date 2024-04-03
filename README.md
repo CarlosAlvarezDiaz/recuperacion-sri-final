@@ -108,5 +108,18 @@ Y luego desde el contendor 'ubu2' hasta la ip del contenedor 'ubu1':
               rtt min/avg/max/mdev = 0.013/0.015/0.018/0.002 ms
               
 6 Sal del terminal, ¿que ocurrió con el contenedor?
+
+Para salir de la terminal usaremos el comando exit:
+
+       $ exit
+
+Y para comprobar el estado de los contenedores despues de salir de la terminal usaremos el comando docker ps:
+
+       $ docker ps -a
+       CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
+       ffe1ce7457c7   ubuntu    "/bin/bash"   11 minutes ago   Up 11 minutes             ubu2
+       85b31d710d28   ubuntu    "/bin/bash"   35 minutes ago   Up 35 minutes             ubu1
+       77953b3c9692   ubuntu    "/bin/bash"   40 minutes ago   Up 40 minutes             focused_fermi
+       
 7 ¿Cuanta memoria en el disco duro ocupaste? ¿Hay alguna herramienta de docker para calcularlo?
 8 ¿Cuanta RAM ocupan los contenedores? Crea cuantos contenedores necesites para calcularlo.
