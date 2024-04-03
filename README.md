@@ -17,6 +17,17 @@ git push -u origin main
         docker.io/library/ubuntu:latest
         
 2 Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
+
+Primero creamos el contenedor con el siguiente comando:
+
+       $ docker run -it  ubuntu
+
+Y despues comprobamos su estado con este otro comando:
+
+       $docker ps -a
+       CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
+       77953b3c9692   ubuntu    "/bin/bash"   42 seconds ago   Up 40 seconds                    focused_fermi
+       
 3 Crea un contenedor con el nombre 'ubu1'. ¿Como puedes acceder a él?
 4 Comprueba que ip tiene y si puedes hacer un ping a google.com
 5 Crea un contenedor con el nombre 'ubu2'. ¿Puedes hacer ping entre los contenedores?
