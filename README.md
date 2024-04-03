@@ -135,6 +135,7 @@ Si que hay una herramienta de docker para calcular la memoria en el disco duro o
 8 ¿Cuanta RAM ocupan los contenedores? Crea cuantos contenedores necesites para calcularlo.
 
 Para calcular cuanta RAM ocupan los contenedores usaremos el comando docker stats: 
+
        $ docker stats
        CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
        ffe1ce7457c7   ubuntu    "/bin/bash"   11 minutes ago   Up 11 minutes             ubu2
