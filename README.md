@@ -7,6 +7,15 @@ git remote add origin https://github.com/CarlosAlvarezDiaz/recuperacion.git
 git push -u origin main
 
 1 Descarga la imagen 'ubuntu' y comprueba que está en tu equipo.
+
+       $ docker pull ubuntu
+        Using default tag: latest
+        latest: Pulling from library/ubuntu
+        bccd10f490ab: Pull complete
+        Digest: sha256:77906da86b60585ce12215807090eb327e7386c8fafb5402369e421f44eff17e
+        Status: Downloaded newer image for ubuntu:latest
+        docker.io/library/ubuntu:latest
+        
 2 Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
 3 Crea un contenedor con el nombre 'ubu1'. ¿Como puedes acceder a él?
 4 Comprueba que ip tiene y si puedes hacer un ping a google.com
