@@ -47,6 +47,10 @@ Y para acceder a el usaremos el comando docker exec:
 
        $ docker exec -it ubu1 bash
 
+#
+![](https://github.com/CarlosAlvarezDiaz/recuperacion-sri-final/blob/main/creando_contenedor_ubu1.png)
+
+
 4 Comprueba que ip tiene y si puedes hacer un ping a google.com
 
 Primero usaremos el comando docker inspect para comprobar su ip:
