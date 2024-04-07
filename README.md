@@ -19,7 +19,7 @@ Utilizaremos el comando docker pull ubuntu:
         docker.io/library/ubuntu:latest
 
 
-        
+#
        ![Creando la imagen de ubuntu](https://github.com/CarlosAlvarezDiaz/recuperacion-sri-final/blob/main/creando_imagen_ubuntu.png)
 
 2 Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
