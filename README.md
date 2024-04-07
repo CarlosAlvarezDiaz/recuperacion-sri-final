@@ -36,6 +36,7 @@ Y despues comprobamos su estado con este otro comando, el cual tambien nos dara 
 
 #
 ![](https://github.com/CarlosAlvarezDiaz/recuperacion-sri-final/blob/main/creando_contenedor_sin_nombre.png)
+
 3 Crea un contenedor con el nombre 'ubu1'. ¿Como puedes acceder a él?
 
 Al igual que en el ejercicio anterior, empezaremos con el comando docker run:
