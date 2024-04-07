@@ -18,7 +18,6 @@ Utilizaremos el comando docker pull ubuntu:
         Status: Downloaded newer image for ubuntu:latest
         docker.io/library/ubuntu:latest
 
-        ![image](https://github.com/CarlosAlvarezDiaz/recuperacion-sri-final/assets/144815112/ae50fcf5-f200-4cb4-9aad-0d867d1d9f5c)
 
 2 Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
 
