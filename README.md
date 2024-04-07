@@ -31,8 +31,8 @@ Primero creamos el contenedor con el siguiente comando:
 Y despues comprobamos su estado con este otro comando, el cual tambien nos dara su nombre:
 
        $docker ps -a
-       CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
-       77953b3c9692   ubuntu    "/bin/bash"   42 seconds ago   Up 40 seconds       focused_fermi
+       CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS          PORTS     NAMES
+       21467d81ef2e   ubuntu    "/bin/bash"   2 minutes ago   Up 19 seconds             vibrant_dijkstra
        
 3 Crea un contenedor con el nombre 'ubu1'. ¿Como puedes acceder a él?
 
