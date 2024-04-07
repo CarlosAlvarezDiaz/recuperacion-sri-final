@@ -17,6 +17,9 @@ Utilizaremos el comando docker pull ubuntu:
         Digest: sha256:77906da86b60585ce12215807090eb327e7386c8fafb5402369e421f44eff17e
         Status: Downloaded newer image for ubuntu:latest
         docker.io/library/ubuntu:latest
+
+
+        
        (https://raw.githubusercontent.com/CarlosAlvarezDiaz/recuperacion-sri-final/88dede29e6f764e86cc39d48e59ba0ef35fa22c1/creando_imagen_ubuntu.png)
 
 2 Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
